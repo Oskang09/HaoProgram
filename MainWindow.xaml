@@ -1,0 +1,106 @@
+﻿<Window x:Class="HaoProgram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:local="clr-namespace:HaoProgram"
+        mc:Ignorable="d"
+        Title="HaoProgram v1" Height="720" Width="1080" Icon="assets/cfc_logo_small.png" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Column="0" Grid.Row="1" x:Name="UIElement">
+            <DockPanel.Background>
+                <ImageBrush ImageSource="assets/cfc_logo.png" Stretch="Uniform"/>
+            </DockPanel.Background>
+            <WindowsFormsHost x:Name="WinFormHost"/>
+        </DockPanel>
+        <Menu Margin="5" Grid.Row="0" Background="{x:Null}">
+            <MenuItem Click="FullFlow" Margin="0 0 5 -6" BorderBrush="{x:Null}" Background="{x:Null}">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Margin="0 0 0 5" HorizontalAlignment="Center" Source="assets/lifecycle.png" Width="64" Height="64" />
+                        <TextBlock HorizontalAlignment="Center" Text="New Customer" Foreground="Black" />
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Click="HalfFlow" Margin="0 0 5 -6" BorderBrush="{x:Null}" Background="{x:Null}">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Margin="0 0 0 5" HorizontalAlignment="Center" Source="assets/existing.png" Width="64" Height="64" />
+                        <TextBlock HorizontalAlignment="Center" Text="Existing Customer" Foreground="Black" />
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Click="POSMenu" Margin="0 0 5 -6" BorderBrush="{x:Null}" Background="{x:Null}">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Margin="0 0 0 5" HorizontalAlignment="Center" Source="assets/pos.png" Width="64" Height="64" />
+                        <TextBlock HorizontalAlignment="Center" Text="POS" Foreground="Black" />
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Click="AppointmentMenu" Margin="0 0 5 -6" BorderBrush="{x:Null}" Background="{x:Null}">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Margin="0 0 0 5" HorizontalAlignment="Center" Source="assets/appointment.png" Width="64" Height="64" />
+                        <TextBlock HorizontalAlignment="Center" Text="Appointment" Foreground="Black" />
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            <Separator />
+            <MenuItem Click="CustomerMenu" Margin="0 0 5 -6" BorderBrush="{x:Null}" Background="{x:Null}">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Margin="0 0 0 5" HorizontalAlignment="Center" Source="assets/customer_button.png" Width="64" Height="64" />
+                        <TextBlock HorizontalAlignment="Center" Text="Customer" Foreground="Black" />
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Click="AgentMenu" Margin="0 0 5 -6" BorderBrush="{x:Null}" Background="{x:Null}">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Margin="0 0 0 5" HorizontalAlignment="Center" Source="assets/agent_button.png" Width="64" Height="64" />
+                        <TextBlock HorizontalAlignment="Center" Text="Agent" Foreground="Black" />
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Click="ProductMenu" Margin="0 0 5 -6" BorderBrush="{x:Null}" Background="{x:Null}">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Margin="0 0 0 5" HorizontalAlignment="Center" Source="assets/product.ico" Width="64" Height="64" />
+                        <TextBlock HorizontalAlignment="Center" Text="Product" Foreground="Black" />
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Click="AgentComissionMenu" Margin="0 0 5 -6" BorderBrush="{x:Null}" Background="{x:Null}">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Margin="0 0 0 5" HorizontalAlignment="Center" Source="assets/commission.png" Width="64" Height="64" />
+                        <TextBlock HorizontalAlignment="Center" Text="Agent Commission" Foreground="Black" />
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Click="ReportMenu" Margin="0 0 5 -6" BorderBrush="{x:Null}" Background="{x:Null}">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Margin="0 0 0 5" HorizontalAlignment="Center" Source="assets/report.png" Width="64" Height="64" />
+                        <TextBlock HorizontalAlignment="Center" Text="Report" Foreground="Black" />
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            <Separator />
+            <MenuItem Click="SettingMenu" Margin="0 0 5 -6" BorderBrush="{x:Null}" Background="{x:Null}">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Image Margin="0 0 0 5" HorizontalAlignment="Center" Source="assets/setting.png" Width="64" Height="64" />
+                        <TextBlock HorizontalAlignment="Center" Text="Setting" Foreground="Black" />
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>

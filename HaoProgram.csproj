@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4840823A-AD30-4B29-98FA-CAF7F7817910}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HaoProgram</RootNamespace>
+    <AssemblyName>HaoProgram</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NTwain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=f9f7e0c5169536c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\NTwain.3.5.1\lib\net40-client\NTwain.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="formcontrol\ActionEventArgs.cs" />
+    <Compile Include="formcontrol\AgentComissionDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formcontrol\AgentComissionDisplay.Designer.cs">
+      <DependentUpon>AgentComissionDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\AgentComissionRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\AgentComissionRequest.Designer.cs">
+      <DependentUpon>AgentComissionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\AgentDataDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formcontrol\AgentDataDisplay.Designer.cs">
+      <DependentUpon>AgentDataDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\AgentDataRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\AgentDataRequest.Designer.cs">
+      <DependentUpon>AgentDataRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\AppointmentDataDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formcontrol\AppointmentDataDisplay.Designer.cs">
+      <DependentUpon>AppointmentDataDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\AppointmentDataRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\AppointmentDataRequest.Designer.cs">
+      <DependentUpon>AppointmentDataRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\AppointmentScanRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\AppointmentScanRequest.Designer.cs">
+      <DependentUpon>AppointmentScanRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\AssignShorcutKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\AssignShorcutKey.Designer.cs">
+      <DependentUpon>AssignShorcutKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\CreateInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\CreateInvoice.Designer.cs">
+      <DependentUpon>CreateInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\CustomerDataDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formcontrol\CustomerDataDisplay.Designer.cs">
+      <DependentUpon>CustomerDataDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\CustomerDataRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\CustomerDataRequest.Designer.cs">
+      <DependentUpon>CustomerDataRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\IUpdateAction.cs" />
+    <Compile Include="formcontrol\IUserAction.cs" />
+    <Compile Include="formcontrol\PayMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\PayMoney.Designer.cs">
+      <DependentUpon>PayMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\POSRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formcontrol\POSRequest.Designer.cs">
+      <DependentUpon>POSRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\ProductDataDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formcontrol\ProductDataDisplay.Designer.cs">
+      <DependentUpon>ProductDataDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\ProductDataRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\ProductDataRequest.Designer.cs">
+      <DependentUpon>ProductDataRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\ReportMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formcontrol\ReportMenu.Designer.cs">
+      <DependentUpon>ReportMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\SelectCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\SelectCustomer.Designer.cs">
+      <DependentUpon>SelectCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\SelectOweCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\SelectOweCustomer.Designer.cs">
+      <DependentUpon>SelectOweCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\SelectPendingSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\SelectPendingSales.Designer.cs">
+      <DependentUpon>SelectPendingSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\SelectProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\SelectProduct.Designer.cs">
+      <DependentUpon>SelectProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\SelectSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formcontrol\SelectSales.Designer.cs">
+      <DependentUpon>SelectSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formcontrol\SettingMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formcontrol\SettingMenu.Designer.cs">
+      <DependentUpon>SettingMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="object\Agent.cs" />
+    <Compile Include="object\AgentCommission.cs" />
+    <Compile Include="object\Appointment.cs" />
+    <Compile Include="object\Customer.cs" />
+    <Compile Include="object\DataManager.cs" />
+    <Compile Include="object\HoldSales.cs" />
+    <Compile Include="object\IDTracker.cs" />
+    <Compile Include="object\IJsonObject.cs" />
+    <Compile Include="object\Invoice.cs" />
+    <Compile Include="object\SAccount.cs" />
+    <Compile Include="object\Sales.cs" />
+    <Compile Include="object\Product.cs" />
+    <Compile Include="object\UserInfomation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="formcontrol\AgentComissionDisplay.resx">
+      <DependentUpon>AgentComissionDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\AgentComissionRequest.resx">
+      <DependentUpon>AgentComissionRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\AgentDataDisplay.resx">
+      <DependentUpon>AgentDataDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\AgentDataRequest.resx">
+      <DependentUpon>AgentDataRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\AppointmentDataDisplay.resx">
+      <DependentUpon>AppointmentDataDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\AppointmentDataRequest.resx">
+      <DependentUpon>AppointmentDataRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\AppointmentScanRequest.resx">
+      <DependentUpon>AppointmentScanRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\AssignShorcutKey.resx">
+      <DependentUpon>AssignShorcutKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\CreateInvoice.resx">
+      <DependentUpon>CreateInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\CustomerDataDisplay.resx">
+      <DependentUpon>CustomerDataDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\CustomerDataRequest.resx">
+      <DependentUpon>CustomerDataRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\PayMoney.resx">
+      <DependentUpon>PayMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\POSRequest.resx">
+      <DependentUpon>POSRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\ProductDataDisplay.resx">
+      <DependentUpon>ProductDataDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\ProductDataRequest.resx">
+      <DependentUpon>ProductDataRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\ReportMenu.resx">
+      <DependentUpon>ReportMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\SelectCustomer.resx">
+      <DependentUpon>SelectCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\SelectOweCustomer.resx">
+      <DependentUpon>SelectOweCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\SelectPendingSales.resx">
+      <DependentUpon>SelectPendingSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\SelectProduct.resx">
+      <DependentUpon>SelectProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\SelectSales.resx">
+      <DependentUpon>SelectSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formcontrol\SettingMenu.resx">
+      <DependentUpon>SettingMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="config\Appointment_Type.config" />
+    <None Include="config\Formatting.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\agent_button.png" />
+    <Resource Include="assets\customer_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\appointment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\product.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\cfc_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\details.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\cfc_logo_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\add_button.png" />
+    <Resource Include="assets\exit_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CSharpOskaAPI\CSharpOskaAPI\CSharpOskaAPI.csproj">
+      <Project>{34FF81AB-7E24-48BD-94BC-2FC1F9B2FBAC}</Project>
+      <Name>CSharpOskaAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\scanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\scanner2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\true.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\pos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\commission.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\customer_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\hold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\pending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\pay_money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Printer_Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\lifecycle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\existing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\owe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\cfc_logo_ss.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
