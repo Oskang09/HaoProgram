@@ -142,7 +142,7 @@
             this.VehicleNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.VehicleNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.VehicleNumber.FormattingEnabled = true;
-            this.VehicleNumber.Location = new System.Drawing.Point(101, 28);
+            this.VehicleNumber.Location = new System.Drawing.Point(101, 27);
             this.VehicleNumber.Name = "VehicleNumber";
             this.VehicleNumber.Size = new System.Drawing.Size(215, 30);
             this.VehicleNumber.TabIndex = 1;

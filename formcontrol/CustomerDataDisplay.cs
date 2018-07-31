@@ -11,9 +11,9 @@ using CSharpOskaAPI.Parse;
 using CSharpOskaAPI.Form;
 using System.IO;
 
-namespace HaoProgram
+namespace HaoProgram_Rebuild
 {
-    public partial class CustomerDataDisplay : UserControl, IUserAction<ActionEventArgs>
+    public partial class CustomerDataDisplay : DisplayControl, IUserAction<ActionEventArgs>
     {
         static string[] sortbyList = { "Vehicle No", "Name", "NRIC / SSM"};
         public DataView DataView { get; set; }

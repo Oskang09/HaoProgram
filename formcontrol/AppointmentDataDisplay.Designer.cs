@@ -371,6 +371,7 @@
             // AppointmentDate
             // 
             this.AppointmentDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AppointmentDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AppointmentDate.Location = new System.Drawing.Point(77, 20);
             this.AppointmentDate.MinDate = new System.DateTime(2018, 4, 2, 0, 0, 0, 0);
             this.AppointmentDate.Name = "AppointmentDate";

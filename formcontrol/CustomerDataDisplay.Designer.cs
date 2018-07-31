@@ -1,4 +1,4 @@
-﻿namespace HaoProgram
+﻿namespace HaoProgram_Rebuild
 {
     partial class CustomerDataDisplay
     {

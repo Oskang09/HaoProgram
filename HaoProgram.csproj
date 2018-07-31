@@ -219,17 +219,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="object\Agent.cs" />
-    <Compile Include="object\AgentCommission.cs" />
     <Compile Include="object\Appointment.cs" />
     <Compile Include="object\Customer.cs" />
     <Compile Include="object\DataManager.cs" />
-    <Compile Include="object\HoldSales.cs" />
     <Compile Include="object\IDTracker.cs" />
     <Compile Include="object\IJsonObject.cs" />
-    <Compile Include="object\Invoice.cs" />
-    <Compile Include="object\SAccount.cs" />
-    <Compile Include="object\Sales.cs" />
-    <Compile Include="object\Product.cs" />
     <Compile Include="object\UserInfomation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

@@ -39,19 +39,10 @@ namespace HaoProgram
                 SortBy.Items.Add(str);
             }
             SortBy.SelectedIndex = 0;
-
-            UpdateAgentCom();
+            
             DataManager.InitializeSKey(this, Prefix);
         }
-
-        public void UpdateAgentCom()
-        {
-            AgentComission.Items.Clear();
-            foreach (var ac in new AgentCommission().GetList())
-            {
-                AgentComission.Items.Add(ac.CategoryName);
-            }
-        }
+        
 
         public void RefreshUI(Agent selected)
         {
